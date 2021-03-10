@@ -28,13 +28,16 @@ document.getElementById('form')
 
         const serviceID = 'default_service';
         const templateID = 'contact_form';
-
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-                btn.value = 'Send Email';
-                alert('Sent!');
-            }, (err) => {
-                btn.value = 'Send Email';
-                alert(JSON.stringify(err));
-            });
+        if (event.target.classList.contains('was-validated')) {
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                    alert('Sent!');
+                    document.getElementById("form").reset();
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                    document.getElementById("form").reset();
+                });
+        }
     });
