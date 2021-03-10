@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <!-- Personal Css -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="mt-5 " id="messageMe">
+        <div class="row mx-3 d-flex justify-content-around" id="phoneOnly">
+            <div class="col-md-7 d-flex justify-content-center align-items-center"
+                style="border:1px solid #333; border-radius: 5%;">
+                <section class="mt-5 mb-5 mx-3" id="examples">
+                    <h1 style="text-align: center">Message Me To Book An Appointment</h1>
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="from_name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" name="from_name" id="from_name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="reply_to" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="reply_to" name="reply_to" />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button id="button" value="Send Email" type="submit" class="btn btn-primary btn-block">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+                integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+                crossorigin="anonymous"></script>
+            <!-- Personal JS -->
+            <script src="script.js"></script>
+            <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script> -->
+            <!-- 
+            <script type="text/javascript">
+                emailjs.init('user_WVG3WjIGiwR6L290QiXwF')
+            </script> -->
+</body>
+
+</html>
