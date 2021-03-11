@@ -1,3 +1,18 @@
+// $("#bootstrapForm").submit(function (event) {
+
+//     // make selected form variable
+//     var vForm = $(this);
+
+//     if (vForm[0].checkValidity() === false) {
+//         event.preventDefault()
+//         event.stopPropagation()
+//     } else {
+
+//     }
+//     vForm.addClass('was-validated');
+// });
+
+
 
 
 (function () {
@@ -17,6 +32,12 @@
         });
     }, false);
 })();
+
+function validatePassword(from_name) {
+    if (!from_name) return 'Full name is required';
+
+    return '';
+}
 
 const btn = document.getElementById('button');
 
@@ -41,3 +62,4 @@ document.getElementById('form')
                 });
         }
     });
+
