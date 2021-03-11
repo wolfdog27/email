@@ -32,14 +32,12 @@ document.getElementById('form')
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     btn.value = 'Send Email';
-                    alert('Sent!');
-                    // document.getElementById("form").reset();
-                    console.log("here");
-                    document.getElementById('from_name').value = ""
+                    $('#success_message').show();
+                    window.setTimeout(function () { location.reload() }, 3000)
                 }, (err) => {
                     btn.value = 'Send Email';
-                    alert(JSON.stringify(err));
-                    document.getElementById("form").reset();
+                    $('#error_message').show();
+                    window.setTimeout(function () { location.reload() }, 3000)
                 });
         }
     });
