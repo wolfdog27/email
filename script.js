@@ -33,7 +33,9 @@ document.getElementById('form')
                 .then(() => {
                     btn.value = 'Send Email';
                     alert('Sent!');
-                    document.getElementById("form").reset();
+                    // document.getElementById("form").reset();
+                    console.log("here");
+                    document.getElementById('from_name').value = ""
                 }, (err) => {
                     btn.value = 'Send Email';
                     alert(JSON.stringify(err));

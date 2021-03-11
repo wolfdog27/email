@@ -18,7 +18,7 @@
             <div class="col-md-7 d-flex justify-content-center align-items-center"
                 style="border:1px solid #333; border-radius: 5%;">
                 <section class="mt-5 mb-5 mx-3" id="examples">
-                    <h1 style="text-align: center">Message Me To Book An Appointment</h1>
+                    <h1 style="text-align: center">Message Me To Chat!</h1>
                     <form id="form" action="/action_page.php" class="needs-validation" novalidate>
                         <div class="form-group">
                             <label for="from_name" class="form-label">Full Name</label>
@@ -59,8 +59,11 @@
             <!-- Personal JS -->
             <script src="script.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
             <script type="text/javascript">
-                emailjs.init('user_WVG3WjIGiwR6L290QiXwF')
+                (function () {
+                    emailjs.init("user_9e7LiyYHCNbWVHKdBSLl8");
+                })();
             </script>
 </body>
 
