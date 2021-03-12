@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="mt-5 " id="messageMe">
+    <!-- <div class="mt-5 " id="messageMe">
         <div class="row mx-3 d-flex justify-content-around" id="phoneOnly">
             <div class="col-md-7 d-flex justify-content-center align-items-center"
                 style="border:1px solid #333; border-radius: 5%;">
@@ -23,7 +23,7 @@
                         <div class="form-group">
                             <label for="from_name" class="form-label">Full Name</label>
                             <input type="text" class="form-control" name="from_name" id="from_name" required />
-                            <div class="invalid-feedback">Please fill out this field.</div>
+                            <div id="fullNameV">Please fill out this field.</div>
                         </div>
                         <div class="form-group">
                             <label for="reply_to" class="form-label">Email</label>
@@ -40,6 +40,7 @@
                             <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
+                        <button type='submit' id='validate'>Validate!</button>
                         <button id="button" value="Send Email" type="submit" class="btn btn-primary btn-block">
                             Submit
                         </button>
@@ -53,26 +54,59 @@
                         </div>
                     </form>
                 </section>
+                <h2 id='result'></h2>
+            </div> -->
 
+    <div class="container">
+        <form id="form" class="form">
+            <div>
+                <label for="from_name">Name</label>
+                <input id="from_name" name="from_name" type="text" required>
             </div>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
-                integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
-                crossorigin="anonymous"></script>
-            <!-- Personal JS -->
-            <script src="script.js"></script>
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+            <div>
+                <label for="reply_to">E-mail</label>
+                <input id="reply_to" name="reply_to" type="text" required>
+                <p id="emailError"></p>
+            </div>
 
-            <script type="text/javascript">
-                (function () {
-                    emailjs.init("user_9e7LiyYHCNbWVHKdBSLl8");
-                })();
-            </script>
+            <div>
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" required>
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" type="text" required></textarea>
+            </div>
+            <button type="submit" id='button'>Submit</button>
+            <div id="success_message"
+                style="width:100%; height:100%; margin-top: 5%; color: rgb(0, 172, 0); display: none; ">
+                <h3>Sent your message successfully!</h3>
+            </div>
+            <div id="error_message" style="width:100%; height:100%; margin-top: 5%; color: red; display: none;  ">
+                <h3>Error</h3> Sorry there was an error sending your form.
+            </div>
+        </form>
+        <h2 id='result'></h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+        crossorigin="anonymous"></script>
+    <!-- Personal JS -->
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_9e7LiyYHCNbWVHKdBSLl8");
+        })();
+    </script>
 </body>
 
 </html>
